@@ -1,8 +1,9 @@
 package esteban.reminder.java5.generics;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import esteban.reminder.java5.utils.AuxiliaryOperations;
 
 /**
  * Illustrates the new feature of Java 5 about Generics.
@@ -10,19 +11,6 @@ import java.util.List;
  * @author estebangm
  */
 public class EnhancedGenerics {
-
-	/*
-	 * Auxiliary method that returns a list of Strings.
-	 * @return list of strings
-	 */
-	private List<String> initList() {
-		List<String> list = new ArrayList<String>();
-		list.add("hello");
-		list.add("cheers!");
-		list.add("have a nice day!");
-		list.add("no way");
-		return list;
-	}
 
 	/**
 	 * Iterates a list of Strings and prints them on the console in a Java 1.4 way.
@@ -32,7 +20,7 @@ public class EnhancedGenerics {
 	 * a specific type, and the current definition of the type is "fuzzy" -- like lint, get it?
 	 */
 	public void iterateDeprecatedGenerics() {
-		 List things = initList();
+		 List things = AuxiliaryOperations.initList();
 		 for (Iterator i = things.iterator(); i.hasNext(); ) {
 		   String item = (String)i.next();
 		   System.out.println(item);
@@ -57,7 +45,7 @@ public class EnhancedGenerics {
 	 * that will only become an error at runtime. The compiler doesn't catch this. 
 	 */
 	public void iterateJava5Generics() {
-		List<String> things = initList();
+		List<String> things = AuxiliaryOperations.initList();
 		for(Iterator<String> i = things.iterator(); i.hasNext(); ) {
 			String item = i.next();
 			System.out.println(item);
