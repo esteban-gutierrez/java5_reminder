@@ -6,15 +6,18 @@ package esteban.reminder.java5.stringbuilder;
  * The class StringBuilder works essentially as an unsynchronized StringBuffer for performance
  * enhancement. You should replace all StringBuffer uses with StringBuilder unless you need the
  * synchronization (which you almost certainly don't).
- * sStringBuilder is almost always faster than StringBuffer.
+ * StringBuilder is almost always faster than StringBuffer.
+ * 
+ * See StackOverflow:
+ * http://stackoverflow.com/questions/355089/stringbuilder-and-stringbuffer
  *
  * @author estebangm
  */
 public class ClassStringBuilder {
 
-	
 	/**
-	 * 
+	 * Silly test to check the better performance for StringBuilder versus StringBuffer (only
+	 * applicable in unsynchronized case).
 	 * 
 	 * @param args arguments (not in use)
 	 */
