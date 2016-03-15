@@ -7,6 +7,10 @@ package esteban.reminder.java5.autoboxing;
  * types and their corresponding object wrapper classes. For example, converting an int to an
  * Integer, a double to a Double, and so on.
  * 
+ * The Java compiler applies autoboxing when a primitive value is:
+ * - Passed as a parameter to a method that expects an object of the corresponding wrapper class.
+ * - Assigned to a variable of the corresponding wrapper class.
+ * 
  * @author estebangm
  */
 public class Autoboxing {

@@ -20,7 +20,11 @@ public class Unboxing {
 	 * generate an error because it creates an Integer object from i and adds the object to li.
 	 * Thus, the compiler converts the previous code to the following at runtime.
 	 * 
-	 * This is the same behaviour as in the method body: 
+	 * The Java compiler applies unboxing when an object of a wrapper class is:
+     * - Passed as a parameter to a method that expects a value of the corresponding primitive type.
+     * - Assigned to a variable of the corresponding primitive type.
+	 * 
+	 * This is equivalent to the current method body: 
 	 * List<Integer> li = new ArrayList<>();
 	 * for (int i = 1; i < 50; i += 2) {
 	 *     li.add(Integer.valueOf(i));
